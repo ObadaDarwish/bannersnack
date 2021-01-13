@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import './styles/styles.scss';
+import CitySearch from './components/CitySearch/CitySearch';
+import WeatherInfo from './components/WeatherInfo/WeatherInfo';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="appContainer">
+            <div className="appContainer__appWrapper">
+                <CitySearch />
+                <WeatherInfo />
+            </div>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,54 @@
+.searchContainer{
+  @include flex(row wrap);
+  justify-content: space-between;
+  background: $white;
+  padding: 2rem;
+  box-shadow: 0 0 0.3rem 0.1rem $gray-500;
+  margin: 1rem;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+  &__searchWrapper{
+    @include flex(column);
+    flex-basis: 70%;
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+    }
+    &__inputWrapper{
+      .MuiFormLabel-root{
+        font-size: 1.6rem;
+      }
+      .MuiTextField-root{
+        width: 100%;
+      }
+      .MuiInputBase-root{
+        font-size: 1.8rem;
+      }
+    }
+    &__unitWrapper{
+      margin-top: 2rem;
+      @include flex_center(row);
+
+      .MuiFormGroup-root{
+        flex-direction: row;
+      }
+      .MuiFormControlLabel-label{
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &__ButtonWrapper{
+    @include flex_center(row);
+    flex-basis: 20%;
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+    }
+    .MuiButtonBase-root{
+      font-size: 1.6rem;
+      @media (max-width: 768px) {
+        width: 50%;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
